@@ -7,7 +7,8 @@ import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
 import SetupScreen from "../screens/SetupScreen";
 import HomeScreen from "../screens/HomeScreen";
-import { BottomTabParamList, SetupParamList, HomeParamList } from "../types";
+import PortionScreen from "../screens/PortionScreen";
+import { BottomTabParamList, SetupParamList, HomeParamList, PortionParamList } from "../types";
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -26,6 +27,13 @@ export default function BottomTabNavigator() {
       <BottomTab.Screen
         name="Home"
         component={HomeNavigator}
+        options={{
+          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="Portion"
+        component={PortionNavigator}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
         }}
@@ -59,5 +67,15 @@ function HomeNavigator() {
     <HomeStack.Navigator>
       <HomeStack.Screen name="HomeScreen" component={HomeScreen} options={{ headerTitle: "PlateMate Home" }} />
     </HomeStack.Navigator>
+  );
+}
+
+const PortionStack = createStackNavigator<PortionParamList>();
+
+function PortionNavigator() {
+  return (
+    <PortionStack.Navigator>
+      <PortionStack.Screen name="PortionScreen" component={PortionScreen} options={{ headerTitle: "PlateMate Portion" }} />
+    </PortionStack.Navigator>
   );
 }

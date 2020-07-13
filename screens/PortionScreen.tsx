@@ -1,11 +1,12 @@
 import * as React from "react";
 import { StyleSheet } from "react-native";
 import { Text, View } from "../components/Themed";
+import PortionInput from "../components/PortionInput";
 
-export default function HomeScreen() {
+export default function PortionScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Home</Text>
+      <Text style={styles.title}>Menu Portion Calculator</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <View>
         <Text lightColor="rgba(0,0,0,0.8)" darkColor="rgba(255,255,255,0.8)">
@@ -16,6 +17,7 @@ export default function HomeScreen() {
         <Text lightColor="rgba(0,0,0,0.8)" darkColor="rgba(255,255,255,0.8)">
           Recipes
         </Text>
+        <PortionInput path="/screens/PortionScreen.tsx" />
       </View>
     </View>
   );

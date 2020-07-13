@@ -16,6 +16,11 @@ export default {
               HomeScreen: "two",
             },
           },
+          Portion: {
+            screens: {
+              PortionScreen: "three",
+            },
+          },
         },
       },
       NotFound: "*",
