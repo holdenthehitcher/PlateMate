@@ -1,40 +1,62 @@
 import * as WebBrowser from "expo-web-browser";
 import React, { Component } from "react";
-import { StyleSheet, TouchableOpacity, Button, FlatList, SafeAreaView } from "react-native";
+import { StyleSheet, FlatList, SafeAreaView } from "react-native";
 import { ListItem } from "react-native-elements";
 
 import Colors from "../constants/Colors";
 import { MonoText } from "./StyledText";
 import { Text, View } from "./Themed";
 
-const TEMPLIST = [
-  {
-    id: "0",
-    title: "Salmon",
-    image: "",
-    type: "Main",
-  },
-  {
-    id: "1",
-    title: "Green Beans",
-    image: "",
-    type: "Side",
-  },
-  {
-    id: "2",
-    title: "Ketchup",
-    image: "",
-    type: "Sauce",
-  },
-  {
-    id: "3",
-    title: "Root Beer",
-    image: "",
-    type: "Drink",
-  },
-];
+const Food = ({ item }: { item: any }) => (
+  <View>
+    <Text>{item.title}</Text>
+  </View>
+);
 
-const Item = ({ item }: { item: any }) => (
+class FoodItems extends Component {
+  constructor(props: any) {
+    super(props);
+
+    this.state = {
+      TEMPLIST: [
+        {
+          id: "0",
+          title: "Salmon",
+          image: "",
+          type: "Main",
+        },
+        {
+          id: "1",
+          title: "Green Beans",
+          image: "",
+          type: "Side",
+        },
+        {
+          id: "2",
+          title: "Ketchup",
+          image: "",
+          type: "Sauce",
+        },
+        {
+          id: "3",
+          title: "Root Beer",
+          image: "",
+          type: "Drink",
+        },
+      ],
+    };
+  }
+
+  render() {
+    return (
+      <View style={{ flex: 1 }}>
+        <FlatList data={this.state.TEMPLIST} renderItem={({ item }) => <Food item={item} />} />
+      </View>
+    );
+  }
+}
+
+/* const Item = ({ item }: { item: any }) => (
   <View>
     <ListItem title={item.title} subtitle={item.type} bottomDivider />
   </View>
@@ -50,7 +72,7 @@ const ItemList = () => {
   );
 };
 
-export default function PortionInput({ path }: { path: string }) {
+export default function FoodItems({ path }: { path: string }) {
   return (
     <View>
       <View style={styles.getStartedContainer}>
@@ -77,11 +99,6 @@ export default function PortionInput({ path }: { path: string }) {
       </View>
       <View style={styles.getStartedContainer}>
         <ItemList />
-      </View>
-      <View style={styles.helpContainer}>
-        <TouchableOpacity style={styles.helpLink}>
-          <Button title="Portion Your Meal" onPress={() => {}}></Button>
-        </TouchableOpacity>
       </View>
     </View>
   );
@@ -137,10 +154,7 @@ const styles = StyleSheet.create({
     marginHorizontal: 20,
     alignItems: "center",
   },
-  helpLink: {
-    paddingVertical: 15,
-  },
-  helpLinkText: {
-    textAlign: "center",
-  },
 });
+*/
+
+export default FoodItems;

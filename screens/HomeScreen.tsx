@@ -12,11 +12,6 @@ export default function HomeScreen() {
           Meal Portion Calculator
         </Text>
       </View>
-      <View>
-        <Text lightColor="rgba(0,0,0,0.8)" darkColor="rgba(255,255,255,0.8)">
-          Recipes
-        </Text>
-      </View>
     </View>
   );
 }
