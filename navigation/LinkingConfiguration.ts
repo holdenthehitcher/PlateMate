@@ -16,9 +16,14 @@ export default {
               HomeScreen: "two",
             },
           },
-          Portion: {
+          AddFood: {
             screens: {
-              PortionScreen: "three",
+              AddFoodScreen: "three",
+            },
+          },
+          PortionAdjustment: {
+            screens: {
+              PortionAdjustmentScreen: "four",
             },
           },
         },

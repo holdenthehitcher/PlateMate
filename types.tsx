@@ -7,6 +7,8 @@ export type BottomTabParamList = {
   Setup: undefined;
   Home: undefined;
   Portion: undefined;
+  AddFood: undefined;
+  PortionAdjustment: undefined;
 };
 
 export type SetupParamList = {
@@ -19,4 +21,12 @@ export type HomeParamList = {
 
 export type PortionParamList = {
   PortionScreen: undefined;
+};
+
+export type AddFoodParamList = {
+  AddFoodScreen: undefined;
+};
+
+export type PortionAdjustmentParamList = {
+  PortionAdjustmentScreen: undefined;
 };

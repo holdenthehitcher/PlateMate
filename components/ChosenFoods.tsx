@@ -13,7 +13,7 @@ const Food = ({ item }: { item: any }) => (
   </View>
 );
 
-class FoodItems extends Component {
+class ChosenFoods extends Component {
   constructor(props: any) {
     super(props);
 
@@ -72,7 +72,7 @@ const ItemList = () => {
   );
 };
 
-export default function FoodItems({ path }: { path: string }) {
+export default function ChosenFoods({ path }: { path: string }) {
   return (
     <View>
       <View style={styles.getStartedContainer}>
@@ -157,4 +157,4 @@ const styles = StyleSheet.create({
 });
 */
 
-export default FoodItems;
+export default ChosenFoods;

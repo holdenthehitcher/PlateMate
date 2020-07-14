@@ -8,7 +8,17 @@ import useColorScheme from "../hooks/useColorScheme";
 import SetupScreen from "../screens/SetupScreen";
 import HomeScreen from "../screens/HomeScreen";
 import PortionScreen from "../screens/PortionScreen";
-import { BottomTabParamList, SetupParamList, HomeParamList, PortionParamList } from "../types";
+import AddFoodScreen from "../screens/AddFoodScreen";
+import PortionAdjustmentScreen from "../screens/PortionAdjustmentScreen";
+
+import {
+  BottomTabParamList,
+  SetupParamList,
+  HomeParamList,
+  PortionParamList,
+  AddFoodParamList,
+  PortionAdjustmentParamList,
+} from "../types";
 
 const BottomTab = createBottomTabNavigator<BottomTabParamList>();
 
@@ -34,6 +44,20 @@ export default function BottomTabNavigator() {
       <BottomTab.Screen
         name="Portion"
         component={PortionNavigator}
+        options={{
+          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="AddFood"
+        component={AddFoodNavigator}
+        options={{
+          tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
+        }}
+      />
+      <BottomTab.Screen
+        name="PortionAdjustment"
+        component={PortionAdjustmentNavigator}
         options={{
           tabBarIcon: ({ color }) => <TabBarIcon name="ios-code" color={color} />,
         }}
@@ -75,7 +99,39 @@ const PortionStack = createStackNavigator<PortionParamList>();
 function PortionNavigator() {
   return (
     <PortionStack.Navigator>
-      <PortionStack.Screen name="PortionScreen" component={PortionScreen} options={{ headerTitle: "PlateMate Portion" }} />
+      <PortionStack.Screen
+        name="PortionScreen"
+        component={PortionScreen}
+        options={{ headerTitle: "PlateMate Portion" }}
+      />
     </PortionStack.Navigator>
+  );
+}
+
+const AddFoodStack = createStackNavigator<AddFoodParamList>();
+
+function AddFoodNavigator() {
+  return (
+    <AddFoodStack.Navigator>
+      <AddFoodStack.Screen
+        name="AddFoodScreen"
+        component={AddFoodScreen}
+        options={{ headerTitle: "PlateMate AddFood" }}
+      />
+    </AddFoodStack.Navigator>
+  );
+}
+
+const PortionAdjustmentStack = createStackNavigator<PortionAdjustmentParamList>();
+
+function PortionAdjustmentNavigator() {
+  return (
+    <PortionAdjustmentStack.Navigator>
+      <PortionAdjustmentStack.Screen
+        name="PortionAdjustmentScreen"
+        component={PortionAdjustmentScreen}
+        options={{ headerTitle: "Getting Started" }}
+      />
+    </PortionAdjustmentStack.Navigator>
   );
 }
