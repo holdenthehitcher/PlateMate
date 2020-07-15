@@ -1,21 +1,15 @@
 import * as React from "react";
-import { StyleSheet } from "react-native";
-import { Text, View } from "../components/Themed";
+import { StyleSheet, Text, View } from "react-native";
 
-import AddFoodList from '../components/AddFoodList';
+import AddFoodList from "../components/AddFoodList";
 
 export default function AddFoodScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Add Foods</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <View>
-        <Text lightColor="rgba(0,0,0,0.8)" darkColor="rgba(255,255,255,0.8)">
-         
-        </Text>
-      </View>
-      <View>
-          <AddFoodList />
+      <View style={styles.separator} />
+      <View style={{ flex: 1 }}>
+        <AddFoodList />
       </View>
     </View>
   );
@@ -23,14 +17,15 @@ export default function AddFoodScreen() {
 
 const styles = StyleSheet.create({
   container: {
-    alignItems: "center",
+    flex: 1,
   },
   title: {
     fontSize: 20,
     fontWeight: "bold",
+    color: "black",
   },
   separator: {
-    marginVertical: 30,
+    marginVertical: 20,
     height: 1,
     width: "80%",
   },

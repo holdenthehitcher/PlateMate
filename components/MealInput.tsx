@@ -1,5 +1,5 @@
 import * as WebBrowser from "expo-web-browser";
-import { Text, View } from "../components/Themed";
+import { Text, View } from "react-native";
 import { Input } from "react-native-elements";
 
 import React from "react";

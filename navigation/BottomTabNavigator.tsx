@@ -26,7 +26,7 @@ export default function BottomTabNavigator() {
   const colorScheme = useColorScheme();
 
   return (
-    <BottomTab.Navigator initialRouteName="Setup" tabBarOptions={{ activeTintColor: Colors[colorScheme].tint }}>
+    <BottomTab.Navigator initialRouteName="Setup" tabBarOptions={{ activeTintColor: "black" }}>
       <BottomTab.Screen
         name="Setup"
         component={SetupNavigator}

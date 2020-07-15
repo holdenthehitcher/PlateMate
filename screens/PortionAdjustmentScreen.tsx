@@ -5,13 +5,10 @@ import { Text, View } from "../components/Themed";
 export default function PortionAdjustmentScreen() {
   return (
     <View style={styles.container}>
-      <Text style={styles.title}>Home</Text>
+      <Text style={styles.title}>Adjust your Portion Size</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
-      <View>
-        <Text lightColor="rgba(0,0,0,0.8)" darkColor="rgba(255,255,255,0.8)">
-          Meal Portion Calculator
-        </Text>
-      </View>
+      <View>{/* Add an updating pie chart*/}</View>
+      <View>{/* Add the items with a portion controller on the side*/}</View>
     </View>
   );
 }

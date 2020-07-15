@@ -1,10 +1,9 @@
 import * as WebBrowser from "expo-web-browser";
 import React from "react";
-import { StyleSheet, TouchableOpacity, Button } from "react-native";
+import { StyleSheet, TouchableOpacity, Button, Text, View } from "react-native";
 
 import Colors from "../constants/Colors";
 import { MonoText } from "./StyledText";
-import { Text, View } from "./Themed";
 
 export default function CreateProfile({ path }: { path: string }) {
   return (

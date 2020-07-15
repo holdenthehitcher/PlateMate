@@ -1,16 +1,13 @@
 import * as React from "react";
-import { StyleSheet } from "react-native";
-import { Text, View } from "../components/Themed";
+import { StyleSheet, Text, View } from "react-native";
 
 export default function HomeScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Home</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <View style={styles.separator} />
       <View>
-        <Text lightColor="rgba(0,0,0,0.8)" darkColor="rgba(255,255,255,0.8)">
-          Meal Portion Calculator
-        </Text>
+        <Text style={{color: "black"}}>Meal Portion Calculator</Text>
       </View>
     </View>
   );
@@ -25,6 +22,7 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 20,
     fontWeight: "bold",
+    color: 'black'
   },
   separator: {
     marginVertical: 30,

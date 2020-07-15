@@ -1,6 +1,5 @@
 import * as React from "react";
-import { StyleSheet, TouchableOpacity, Button, ScrollView } from "react-native";
-import { Text, View } from "../components/Themed";
+import { StyleSheet, TouchableOpacity, Button, ScrollView, Text, View} from "react-native";
 import ChosenFoods from "../components/ChosenFoods";
 import MealInput from "../components/MealInput";
 
@@ -33,9 +32,13 @@ const styles = StyleSheet.create({
   container: {
     justifyContent: "center",
   },
+  regularText: {
+    color: 'black'
+  },
   title: {
     fontSize: 20,
     fontWeight: "bold",
+    color: 'black'
   },
   separator: {
     marginVertical: 30,

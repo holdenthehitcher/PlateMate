@@ -1,11 +1,10 @@
 import * as WebBrowser from "expo-web-browser";
 import React, { Component, useState } from "react";
-import { StyleSheet, FlatList, SafeAreaView } from "react-native";
+import { StyleSheet, FlatList, SafeAreaView, Text, View } from "react-native";
 import { ListItem, SearchBar } from "react-native-elements";
 
 import Colors from "../constants/Colors";
 import { MonoText } from "./StyledText";
-import { Text, View } from "./Themed";
 
 const Food = ({ item }: { item: any }) => (
   <View>
@@ -56,7 +55,7 @@ class AddFoodList extends Component {
         <View>
           <SearchBar placeholder="Search Foods" />
         </View>
-        <View style={{ flex: 1 }}>
+        <View>
           <FlatList data={this.state.TEMPLIST} renderItem={({ item }) => <Food item={item} />} />
         </View>
       </>

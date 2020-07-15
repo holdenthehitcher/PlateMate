@@ -1,8 +1,7 @@
 import * as React from "react";
-import { StyleSheet } from "react-native";
+import { StyleSheet, Text, View } from "react-native";
 
 import CreateProfile from "../components/CreateProfile";
-import { Text, View } from "../components/Themed";
 
 export default function SetupScreen() {
   return (

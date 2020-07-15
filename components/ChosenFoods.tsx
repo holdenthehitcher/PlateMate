@@ -1,11 +1,10 @@
 import * as WebBrowser from "expo-web-browser";
 import React, { Component } from "react";
-import { StyleSheet, FlatList, SafeAreaView } from "react-native";
+import { StyleSheet, FlatList, SafeAreaView, Text, View } from "react-native";
 import { ListItem } from "react-native-elements";
 
 import Colors from "../constants/Colors";
 import { MonoText } from "./StyledText";
-import { Text, View } from "./Themed";
 
 const Food = ({ item }: { item: any }) => (
   <View>
