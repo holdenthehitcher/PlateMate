@@ -7,7 +7,7 @@ export default function SetupScreen() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Create Your Profile</Text>
-      <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
+      <View style={styles.separator} />
       <CreateProfile path="/screens/SetupScreen.tsx" />
     </View>
   );

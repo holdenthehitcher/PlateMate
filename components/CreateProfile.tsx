@@ -9,15 +9,9 @@ export default function CreateProfile({ path }: { path: string }) {
   return (
     <View>
       <View style={styles.getStartedContainer}>
-        <Text style={styles.getStartedText} lightColor="rgba(0,0,0,0.8)" darkColor="rgba(255,255,255,0.8)">
-          add a profile photo:
-        </Text>
+        <Text style={styles.getStartedText}>add a profile photo:</Text>
       </View>
-      <View
-        style={[styles.codeHighlightContainer, styles.homeScreenFilename]}
-        darkColor="rgba(255,255,255,0.05)"
-        lightColor="rgba(0,0,0,0.05)"
-      >
+      <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
         <Text>Enter Biometrics:</Text>
         <Text>Height</Text>
         <Text>Age</Text>
@@ -26,14 +20,10 @@ export default function CreateProfile({ path }: { path: string }) {
         <Text>Physical Activity Level</Text>
       </View>
       <View>
-        <Text style={styles.getStartedText} lightColor="rgba(0,0,0,0.8)" darkColor="rgba(255,255,255,0.8)">
-          Enter Goal Weight
-        </Text>
+        <Text style={styles.getStartedText}>Enter Goal Weight</Text>
       </View>
       <View style={styles.getStartedContainer}>
-        <Text style={styles.getStartedText} lightColor="rgba(0,0,0,0.8)" darkColor="rgba(255,255,255,0.8)">
-          Enter Motivational Quote
-        </Text>
+        <Text style={styles.getStartedText}>Enter Motivational Quote</Text>
       </View>
       <View style={styles.helpContainer}>
         <TouchableOpacity style={styles.helpLink}>
