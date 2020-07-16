@@ -79,7 +79,11 @@ const SetupStack = createStackNavigator<SetupParamList>();
 function SetupNavigator() {
   return (
     <SetupStack.Navigator>
-      <SetupStack.Screen name="SetupScreen" component={SetupScreen} options={{ headerTitle: "Getting Started" }} />
+      <SetupStack.Screen
+        name="SetupScreen"
+        component={SetupScreen}
+        options={{ headerTitle: "Getting Started with PlateMate" }}
+      />
     </SetupStack.Navigator>
   );
 }
@@ -89,7 +93,7 @@ const HomeStack = createStackNavigator<HomeParamList>();
 function HomeNavigator() {
   return (
     <HomeStack.Navigator>
-      <HomeStack.Screen name="HomeScreen" component={HomeScreen} options={{ headerTitle: "PlateMate Home" }} />
+      <HomeStack.Screen name="HomeScreen" component={HomeScreen} options={{ headerTitle: "Home" }} />
     </HomeStack.Navigator>
   );
 }
@@ -102,7 +106,7 @@ function PortionNavigator() {
       <PortionStack.Screen
         name="PortionScreen"
         component={PortionScreen}
-        options={{ headerTitle: "PlateMate Portion" }}
+        options={{ headerTitle: "Portion Your Meal with PlateMate" }}
       />
     </PortionStack.Navigator>
   );
@@ -113,11 +117,7 @@ const AddFoodStack = createStackNavigator<AddFoodParamList>();
 function AddFoodNavigator() {
   return (
     <AddFoodStack.Navigator>
-      <AddFoodStack.Screen
-        name="AddFoodScreen"
-        component={AddFoodScreen}
-        options={{ headerTitle: "PlateMate AddFood" }}
-      />
+      <AddFoodStack.Screen name="AddFoodScreen" component={AddFoodScreen} options={{ headerTitle: "Add A Food" }} />
     </AddFoodStack.Navigator>
   );
 }
@@ -130,7 +130,7 @@ function PortionAdjustmentNavigator() {
       <PortionAdjustmentStack.Screen
         name="PortionAdjustmentScreen"
         component={PortionAdjustmentScreen}
-        options={{ headerTitle: "Getting Started" }}
+        options={{ headerTitle: "Adjust Your Portion Size" }}
       />
     </PortionAdjustmentStack.Navigator>
   );

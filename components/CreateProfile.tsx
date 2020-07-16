@@ -1,19 +1,27 @@
 import * as WebBrowser from "expo-web-browser";
-import React from "react";
-import { StyleSheet, TouchableOpacity, Button, Text, View } from "react-native";
+import React, { useState } from "react";
+import { StyleSheet, TouchableOpacity, Button, Text, View, TextInput } from "react-native";
+
+import HeightInput from './HeightInput';
 
 import Colors from "../constants/Colors";
 import { MonoText } from "./StyledText";
 
 export default function CreateProfile({ path }: { path: string }) {
+  const [age, setAge] = useState("");
+  const [sex, setSex] = useState("");
+  const [weight, setWeight] = useState("");
+  const [stressFactor, setStressFactor] = useState("");
+
+  
   return (
     <View>
       <View style={styles.getStartedContainer}>
         <Text style={styles.getStartedText}>add a profile photo:</Text>
       </View>
       <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-        <Text>Enter Biometrics:</Text>
-        <Text>Height</Text>
+        <Text>Enter Your Beginning Body Stats:</Text>
+        <HeightInput />
         <Text>Age</Text>
         <Text>Sex</Text>
         <Text>Weight</Text>
