@@ -2,6 +2,7 @@ import * as WebBrowser from "expo-web-browser";
 import React, { useState } from "react";
 import { StyleSheet, TouchableOpacity, Button, Text, View, TextInput } from "react-native";
 
+import SexInput from './SexInput';
 import PhysicalActivityInput from "./PhysicalActivityInput";
 
 import Colors from "../constants/Colors";
@@ -20,7 +21,7 @@ export default function CreateProfile({ path }: { path: string }) {
       <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
         <Text>Enter Your Beginning Body Stats:</Text>
         <Text>Age</Text>
-        <Text>Sex</Text>
+        <SexInput />
         <Text>Weight</Text>
         <PhysicalActivityInput />
       </View>
