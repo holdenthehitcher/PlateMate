@@ -4,6 +4,9 @@ import { View, Text } from "react-native";
 
 export default function AgeInput() {
   const [years, setYears] = useState(35);
+
+  const formulaAge = years * (-5);
+  
   return (
     <View>
       <Text>What's your age?: {years} years young</Text>

@@ -3,11 +3,16 @@ import { View, Text, Modal, StyleSheet, Picker, Button } from "react-native";
 import { Icon } from "react-native-elements";
 
 const PhysicalActivityInput = () => {
-  const [exerciseValue, setExerciseValue] = useState(1);
+  const [exerciseValue, setExerciseValue] = useState(1.2);
 
   const [modalVisible, setModalVisible] = useState(false);
-  const items = ["I Exercise Everyday", "I Do Moderate Exercise", "I Sometimes Exercise", "I Rarely Exercise"];
-  console.log(exerciseValue)
+  const items = [
+    { label: "I Am an Extreme Exerciser", value: 1.9 },
+    { label: "I Exercise Everyday", value: 1.725 },
+    { label: "I Do Moderate Exercise", value: 1.55 },
+    { label: "I Sometimes Exercise", value: 1.375 },
+    { label: "I Rarely Exercise", value: 1.2 },
+  ];
 
   return (
     <>
@@ -20,8 +25,8 @@ const PhysicalActivityInput = () => {
               <Icon name="close" onPress={() => setModalVisible(!modalVisible)} />
             </View>
             <Picker selectedValue={exerciseValue} onValueChange={(value) => setExerciseValue(value)}>
-              {items.map((item) => (
-                <Picker.Item key={item} value={items.indexOf(item)} label={item} />
+              {items.map(({ label, value }) => (
+                <Picker.Item key={value} value={value} label={label} />
               ))}
             </Picker>
           </View>

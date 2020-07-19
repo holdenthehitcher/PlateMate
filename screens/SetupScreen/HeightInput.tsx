@@ -9,6 +9,7 @@ const HeightInput = () => {
   const [modalVisible, setModalVisible] = useState(false);
 
   const heightCm = feet * 30.48 + inches * 2.54;
+  const formulaHeight = 6.25 * heightCm;
 
   return (
     <>

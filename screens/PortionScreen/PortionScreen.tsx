@@ -1,7 +1,6 @@
 import * as React from "react";
 import { StyleSheet, TouchableOpacity, Button, ScrollView, Text, View} from "react-native";
 import ChosenFoods from "./ChosenFoods";
-import MealInput from "./MealInput";
 
 export default function PortionScreen() {
   return (
@@ -9,10 +8,6 @@ export default function PortionScreen() {
       <Text style={styles.title}>Menu Portion Calculator</Text>
       <View style={styles.separator} lightColor="#eee" darkColor="rgba(255,255,255,0.1)" />
       <View>
-        <Text lightColor="rgba(0,0,0,0.8)" darkColor="rgba(255,255,255,0.8)">
-          Meal Portion Calculator
-        </Text>
-        <MealInput />
         <Text lightColor="rgba(0,0,0,0.8)" darkColor="rgba(255,255,255,0.8)">
           Foods You're Having this Meal
         </Text>
