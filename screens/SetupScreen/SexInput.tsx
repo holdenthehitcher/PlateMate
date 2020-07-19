@@ -16,7 +16,6 @@ const SexInput: React.FC<Props> = ({ title, value }) => {
       setSex(value);
     }
   }, [value]);
-  console.log(sex);
   return (
     <View>
       <Button title="Choose Your Sex" onPress={() => setModalVisible(!modalVisible)} />

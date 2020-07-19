@@ -4,7 +4,10 @@ import { StyleSheet, TouchableOpacity, Button, Text, View, TextInput } from "rea
 
 import SexInput from "./SexInput";
 import PhysicalActivityInput from "./PhysicalActivityInput";
-import ImageInput from "./ImageInput";
+import AgeInput from "./AgeInput";
+import WeightInput from "./WeightInput";
+import GoalWeightInput from "./GoalWeightInput";
+
 
 import Colors from "../../constants/Colors";
 import { MonoText } from "../../components/StyledText";
@@ -20,15 +23,13 @@ export default function CreateProfile({ path }: { path: string }) {
         <Text></Text>
       </View>
       <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
-        <Text>Enter Your Beginning Body Stats:</Text>
-        <Text>Age</Text>
+        <Text>Enter Your Starting Stats:</Text>
+        <AgeInput />
         <SexInput />
-        <Text>Weight</Text>
+        <WeightInput />
         <PhysicalActivityInput />
       </View>
-      <View>
-        <Text style={styles.getStartedText}>Enter Goal Weight</Text>
-      </View>
+      <GoalWeightInput />
       <View style={styles.helpContainer}>
         <TouchableOpacity style={styles.helpLink}>
           <Button title="Create Profile" onPress={() => {}}></Button>
