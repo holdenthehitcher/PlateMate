@@ -2,11 +2,12 @@ import * as WebBrowser from "expo-web-browser";
 import React, { useState } from "react";
 import { StyleSheet, TouchableOpacity, Button, Text, View, TextInput } from "react-native";
 
-import SexInput from './SexInput';
+import SexInput from "./SexInput";
 import PhysicalActivityInput from "./PhysicalActivityInput";
+import ImageInput from "./ImageInput";
 
-import Colors from "../constants/Colors";
-import { MonoText } from "./StyledText";
+import Colors from "../../constants/Colors";
+import { MonoText } from "../../components/StyledText";
 
 export default function CreateProfile({ path }: { path: string }) {
   const [age, setAge] = useState("");
@@ -16,7 +17,7 @@ export default function CreateProfile({ path }: { path: string }) {
   return (
     <View>
       <View style={styles.getStartedContainer}>
-        <Text style={styles.getStartedText}>add a profile photo:</Text>
+        <Text></Text>
       </View>
       <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
         <Text>Enter Your Beginning Body Stats:</Text>
@@ -27,9 +28,6 @@ export default function CreateProfile({ path }: { path: string }) {
       </View>
       <View>
         <Text style={styles.getStartedText}>Enter Goal Weight</Text>
-      </View>
-      <View style={styles.getStartedContainer}>
-        <Text style={styles.getStartedText}>Enter Motivational Quote</Text>
       </View>
       <View style={styles.helpContainer}>
         <TouchableOpacity style={styles.helpLink}>

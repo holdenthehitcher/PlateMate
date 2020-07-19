@@ -1,7 +1,7 @@
 import * as React from "react";
 import { StyleSheet, TouchableOpacity, Button, ScrollView, Text, View} from "react-native";
-import ChosenFoods from "../components/ChosenFoods";
-import MealInput from "../components/MealInput";
+import ChosenFoods from "./ChosenFoods";
+import MealInput from "./MealInput";
 
 export default function PortionScreen() {
   return (

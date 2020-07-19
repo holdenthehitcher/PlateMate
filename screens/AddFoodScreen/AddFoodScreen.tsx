@@ -1,7 +1,7 @@
 import * as React from "react";
 import { StyleSheet, Text, View } from "react-native";
 
-import AddFoodList from "../components/AddFoodList";
+import AddFoodList from "./AddFoodList";
 
 export default function AddFoodScreen() {
   return (

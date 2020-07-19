@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Button, View, Modal, Picker, StyleSheet, Text } from "react-native";
 import { Icon } from "react-native-elements";
 
-
 type Props = {
   title: string;
   value?: string;
@@ -17,7 +16,7 @@ const SexInput: React.FC<Props> = ({ title, value }) => {
       setSex(value);
     }
   }, [value]);
-console.log(sex)
+  console.log(sex);
   return (
     <View>
       <Button title="Choose Your Sex" onPress={() => setModalVisible(!modalVisible)} />
@@ -25,13 +24,13 @@ console.log(sex)
         <View style={styles.container}>
           <View style={styles.pickerContainer}>
             <View style={styles.header}>
-            <Text>{title || "What's Your Sex"}</Text>
+              <Text>{title || "What's Your Sex"}</Text>
               <Icon name="close" onPress={() => setModalVisible(!modalVisible)} />
             </View>
-              <Picker selectedValue={sex} onValueChange={(value) => setSex(value)}>
-                <Picker.Item label="Male" value="male" />
-                <Picker.Item label="Female" value="female" />
-              </Picker>
+            <Picker selectedValue={sex} onValueChange={(value) => setSex(value)}>
+              <Picker.Item label="Male" value="male" />
+              <Picker.Item label="Female" value="female" />
+            </Picker>
           </View>
         </View>
       </Modal>

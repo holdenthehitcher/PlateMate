@@ -3,8 +3,8 @@ import React, { Component, useState } from "react";
 import { StyleSheet, FlatList, SafeAreaView, Text, View } from "react-native";
 import { ListItem, SearchBar } from "react-native-elements";
 
-import Colors from "../constants/Colors";
-import { MonoText } from "./StyledText";
+import Colors from "../../constants/Colors";
+import { MonoText } from "../../components/StyledText";
 
 const Food = ({ item }: { item: any }) => (
   <View>

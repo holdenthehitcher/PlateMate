@@ -3,8 +3,8 @@ import React, { Component } from "react";
 import { StyleSheet, FlatList, SafeAreaView, Text, View } from "react-native";
 import { ListItem } from "react-native-elements";
 
-import Colors from "../constants/Colors";
-import { MonoText } from "./StyledText";
+import Colors from "../../constants/Colors";
+import { MonoText } from "../../components/StyledText";
 
 const Food = ({ item }: { item: any }) => (
   <View>
@@ -12,44 +12,44 @@ const Food = ({ item }: { item: any }) => (
   </View>
 );
 
+const TEMPLIST = [
+  {
+    id: "0",
+    title: "Salmon",
+    image: "",
+    type: "Main",
+  },
+  {
+    id: "1",
+    title: "Green Beans",
+    image: "",
+    type: "Side",
+  },
+  {
+    id: "2",
+    title: "Ketchup",
+    image: "",
+    type: "Sauce",
+  },
+  {
+    id: "3",
+    title: "Root Beer",
+    image: "",
+    type: "Drink",
+  },
+];
+
 class ChosenFoods extends Component {
   constructor(props: any) {
     super(props);
 
-    this.state = {
-      TEMPLIST: [
-        {
-          id: "0",
-          title: "Salmon",
-          image: "",
-          type: "Main",
-        },
-        {
-          id: "1",
-          title: "Green Beans",
-          image: "",
-          type: "Side",
-        },
-        {
-          id: "2",
-          title: "Ketchup",
-          image: "",
-          type: "Sauce",
-        },
-        {
-          id: "3",
-          title: "Root Beer",
-          image: "",
-          type: "Drink",
-        },
-      ],
-    };
+    this.state = {};
   }
 
   render() {
     return (
       <View style={{ flex: 1 }}>
-        <FlatList data={this.state.TEMPLIST} renderItem={({ item }) => <Food item={item} />} />
+        <FlatList data={TEMPLIST} renderItem={({ item }) => <Food item={item} />} />
       </View>
     );
   }

@@ -5,11 +5,11 @@ import * as React from "react";
 
 import Colors from "../constants/Colors";
 import useColorScheme from "../hooks/useColorScheme";
-import SetupScreen from "../screens/SetupScreen";
-import HomeScreen from "../screens/HomeScreen";
-import PortionScreen from "../screens/PortionScreen";
+import SetupScreen from "../screens/SetupScreen/SetupScreen";
+import HomeScreen from "../screens/HomeScreen/HomeScreen";
+import PortionScreen from "../screens/PortionScreen/PortionScreen";
 import AddFoodScreen from "../screens/AddFoodScreen";
-import PortionAdjustmentScreen from "../screens/PortionAdjustmentScreen";
+import PortionAdjustmentScreen from "../screens/AdjustmentScreen/AdjustmentScreen";
 
 import {
   BottomTabParamList,

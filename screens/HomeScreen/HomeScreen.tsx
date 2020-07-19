@@ -1,5 +1,7 @@
 import * as React from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, Button } from "react-native";
+
+
 
 export default function HomeScreen() {
   return (
@@ -7,7 +9,10 @@ export default function HomeScreen() {
       <Text style={styles.title}>Home</Text>
       <View style={styles.separator} />
       <View>
-        <Text style={{color: "black"}}>Meal Portion Calculator</Text>
+        <Button title="Portion Calculator"></Button>
+      </View>
+      <View>
+        <Button title="Change Your Settings"></Button>
       </View>
     </View>
   );
