@@ -2,10 +2,11 @@ import * as WebBrowser from "expo-web-browser";
 import React, { useState } from "react";
 import { StyleSheet, TouchableOpacity, Button, Text, View, TextInput } from "react-native";
 
-import SexInput from "./SexInput";
-import PhysicalActivityInput from "./PhysicalActivityInput";
+import HeightInput from './HeightInput';
 import AgeInput from "./AgeInput";
+import SexInput from "./SexInput";
 import WeightInput from "./WeightInput";
+import PhysicalActivityInput from "./PhysicalActivityInput";
 import GoalWeightInput from "./GoalWeightInput";
 
 
@@ -24,6 +25,7 @@ export default function CreateProfile({ path }: { path: string }) {
       </View>
       <View style={[styles.codeHighlightContainer, styles.homeScreenFilename]}>
         <Text>Enter Your Starting Stats:</Text>
+        <HeightInput />
         <AgeInput />
         <SexInput />
         <WeightInput />
