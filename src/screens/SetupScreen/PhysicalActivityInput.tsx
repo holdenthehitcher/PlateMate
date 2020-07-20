@@ -7,11 +7,11 @@ const PhysicalActivityInput = () => {
 
   const [modalVisible, setModalVisible] = useState(false);
   const items = [
-    { label: "I Am an Extreme Exerciser", value: 1.9 },
-    { label: "I Exercise Everyday", value: 1.725 },
-    { label: "I Do Moderate Exercise", value: 1.55 },
-    { label: "I Sometimes Exercise", value: 1.375 },
-    { label: "I Rarely Exercise", value: 1.2 },
+    { label: "I Am an Extreme Exerciser", stressFactor: 1.9 },
+    { label: "I Exercise Everyday", stressFactor: 1.725 },
+    { label: "I Do Moderate Exercise", stressFactor: 1.55 },
+    { label: "I Sometimes Exercise", stressFactor: 1.375 },
+    { label: "I Rarely Exercise", stressFactor: 1.2 },
   ];
 
   return (
@@ -25,8 +25,8 @@ const PhysicalActivityInput = () => {
               <Icon name="close" onPress={() => setModalVisible(!modalVisible)} />
             </View>
             <Picker selectedValue={exerciseValue} onValueChange={(value) => setExerciseValue(value)}>
-              {items.map(({ label, value }) => (
-                <Picker.Item key={value} value={value} label={label} />
+              {items.map(({ label, stressFactor }) => (
+                <Picker.Item key={stressFactor} value={stressFactor} label={label} />
               ))}
             </Picker>
           </View>

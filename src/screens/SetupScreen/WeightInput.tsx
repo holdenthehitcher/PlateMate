@@ -6,6 +6,7 @@ export default function WeightInput() {
   const [pounds, setPounds] = useState(200);
   const weightKg = pounds / 2.2;
   const formulaWeight = weightKg*10;
+  
   return (
     <View>
       <Text>What's your Current Weight: {pounds} pounds</Text>
